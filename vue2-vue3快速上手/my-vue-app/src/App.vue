@@ -104,7 +104,7 @@ function handleClick() {
 </script> -->
 
 <!-- 携带参数 -->
-<template>
+<!-- <template>
   <div>
     <HelloWorld2 ref="childRef"></HelloWorld2>
     <button @click="$refs.childRef.childClick(1)">fatClick</button>
@@ -119,7 +119,7 @@ const { proxy } = getCurrentInstance()
 function handleClick() {
   proxy.$refs.childRef.childClick(2)
 }
-</script>
+</script> -->
 
 
 <!-- 生命周期 -->
@@ -140,6 +140,22 @@ function init() {
   num.value = 666
 }
 </script> -->
+
+<!-- 插槽 -->
+<template>
+  <div>
+    <HelloWorld2>
+      <h2>222</h2>
+      <template #left>left</template>
+    </HelloWorld2>
+  </div>
+</template>
+
+<script setup>
+import HelloWorld2 from './components/HelloWorld2.vue';
+</script>
+
+
 
 
 

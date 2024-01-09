@@ -1,5 +1,5 @@
 <!-- 一般父子组件 -->
-<template>
+<!-- <template>
   <div>
     <h1>child</h1>
   </div>
@@ -14,4 +14,17 @@ defineExpose({
 function childClick(num) {
     console.log(num)
 }
+</script>  -->
+
+<template>
+  <div>
+    <h1>child2slot</h1>
+    <slot name="left"/>
+    <slot />
+  </div>
+  
+</template>
+<script setup>
 </script> 
+
+ 
