@@ -29,8 +29,8 @@ export default {
             // window.location.reload();
             // document.body.innerHTML = oldContent;
             // return false;
-            console.log(this.$refs['contentToPrint'].$el)
-            this.$print(this.$refs['contentToPrint'].$el);
+            // this.$print(this.$refs['contentToPrint'].$el);
+            window.print()
         }
   }
 }
