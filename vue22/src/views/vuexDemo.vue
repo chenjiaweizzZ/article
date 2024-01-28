@@ -3,8 +3,9 @@
         <h1>vueX_demo</h1>
         <h1>当前计数 {{ this.$store.state.counter }}</h1>
         <div>
-            <el-button @click="counterAdd()">counterAdd</el-button>
-            <el-button @click="counterMin()">counterMin</el-button>
+            <el-button @click="counterAdd()">counterAdd+1</el-button>
+            <el-button @click="counterMin()">counterMin-1</el-button>
+            <el-button @click="counterMinMore(5)">counterMin++</el-button>
         </div>
         <div>
             <h5>getStudentNameString: {{ this.$store.getters.getStudentNameString }}</h5>
@@ -42,6 +43,13 @@ export default {
         counterMin() {
             console.log("min")
             this.$store.commit('decrement')
+        },
+        counterMinMore(counter) {
+            // this.$store.commit('incrementMore',count)
+            this.$store.commit({
+                type: 'incrementMore',
+                counter
+            })
         }
     }
 }

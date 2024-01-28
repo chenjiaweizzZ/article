@@ -24,7 +24,13 @@ const store =  new Vuex.Store({
         },
         decrement(state) {
             state.counter--
+        },
+        incrementMore(state, payload) {
+            state.counter += payload?.counter
         }
+        // incrementMore(state, counter) {
+        //     state.counter += { counter }
+        // }
     },
     getters: {
         getStudentNameString(state) {
