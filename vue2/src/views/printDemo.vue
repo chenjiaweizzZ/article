@@ -2,7 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld  msg="Welcome to Your Vue.js App"></HelloWorld>
-    <button @click="print">打印</button>
+    <el-button @click="print">打印</el-button>
     <child id="print" ref="contentToPrint"></child>
   </div>
 </template>

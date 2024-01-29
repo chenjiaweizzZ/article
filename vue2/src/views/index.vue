@@ -5,6 +5,7 @@
             <el-button @click="skip('print')">print案例</el-button>
             <el-button @click="skip('dateDemo')">deteDemo</el-button>
             <el-button @click="skip('vuexDemo')">vuexDemo</el-button>
+            <el-button @click="skip('dialogDemo')">el-dialog封装</el-button>
         </div>
     </div>
 </template>

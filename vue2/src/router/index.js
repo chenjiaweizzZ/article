@@ -36,6 +36,11 @@ const routes = [
     path: '/vuexDemo',
     name: 'vuexDemo',
     component: () => import('../views/vuexDemo.vue')
+  },
+  {
+    path: '/dialogDemo',
+    name: 'dialogDemo',
+    component: () => import('../views/dialogDemo.vue')
   }
 ]
 

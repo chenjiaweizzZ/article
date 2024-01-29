@@ -1,11 +1,11 @@
 <template>
     <div class="about">
         <h1>date</h1>
-        <input type="text" v-model="date">
-        <button @click="getThisWeek(date)">getThisWeek</button>
-        <button @click="getLastWeek(date)">getlastWeek</button>
-        <button @click="getThisMonth(date)">getTiisMonth</button>
-        <button @click="getLastMonth(date)">getLastMonth</button>
+        <el-input type="text" v-model="date"></el-input>
+        <el-button @click="getThisWeek(date)">getThisWeek</el-button>
+        <el-button @click="getLastWeek(date)">getlastWeek</el-button>
+        <el-button @click="getThisMonth(date)">getTiisMonth</el-button>
+        <el-button @click="getLastMonth(date)">getLastMonth</el-button>
     </div>
 </template>
 
