@@ -27,6 +27,14 @@ const store =  new Vuex.Store({
         },
         incrementMore(state, payload) {
             state.counter += payload?.counter
+        },
+        setCounter(state, payload) {
+            state.counter = payload
+        },
+        delayIncrement(state) {
+            setTimeout(() => {
+                state.counter++
+            }, 1000);
         }
         // incrementMore(state, counter) {
         //     state.counter += { counter }
@@ -49,7 +57,19 @@ const store =  new Vuex.Store({
         },
     },
     actions: {
-
+        adelayIncrement(context, payload) {
+            setTimeout(() => {
+                context.commit('increment')
+                payload()
+            }, 1000);
+        },
+        adelayUpdate(context, payload) {
+            setTimeout(() => {
+                console.log(payload)
+                context.commit('setCounter',payload.num)
+                payload.success()
+            },1000)
+        }
     },
     modules: {
 

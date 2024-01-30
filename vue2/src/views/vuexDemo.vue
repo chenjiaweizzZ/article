@@ -6,6 +6,9 @@
             <el-button @click="counterAdd()">counterAdd+1</el-button>
             <el-button @click="counterMin()">counterMin-1</el-button>
             <el-button @click="counterMinMore(5)">counterMin++</el-button>
+            <el-button @click="counterAddDelay()">counterAddDelay++</el-button>
+            <el-button @click="counterAddDelay2()">counterAddDelayDispatch</el-button>
+            <el-button @click="counterUpdateDelay(99)">counterUpdateDelay</el-button>
         </div>
         <div>
             <h5>getStudentNameString: {{ this.$store.getters.getStudentNameString }}</h5>
@@ -49,6 +52,22 @@ export default {
             this.$store.commit({
                 type: 'incrementMore',
                 counter
+            })
+        },
+        counterAddDelay() {
+            this.$store.commit('delayIncrement')
+        },
+        counterAddDelay2() {
+            this.$store.dispatch('adelayIncrement', () => {
+                console.log('finished!!!')
+            })
+        },
+        counterUpdateDelay(num) {
+            this.$store.dispatch('adelayUpdate', {
+                num,
+                success: () => {
+                    console.log('finished')
+                }
             })
         }
     }
