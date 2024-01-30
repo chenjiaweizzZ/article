@@ -41,6 +41,11 @@ const routes = [
     path: '/dialogDemo',
     name: 'dialogDemo',
     component: () => import('../views/dialogDemo.vue')
+  },
+  {
+    path: '/inputTypeNumber',
+    name: 'inputTypeNumber',
+    component: () => import("../views/inputTypeNumber")
   }
 ]
 

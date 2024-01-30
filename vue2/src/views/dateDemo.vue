@@ -1,7 +1,7 @@
 <template>
     <div class="about">
         <h1>date</h1>
-        <el-input type="text" v-model="date"></el-input>
+        <span class="text-box"><el-input type="text" v-model="date"></el-input></span>
         <el-button @click="getThisWeek(date)">getThisWeek</el-button>
         <el-button @click="getLastWeek(date)">getlastWeek</el-button>
         <el-button @click="getThisMonth(date)">getTiisMonth</el-button>
@@ -72,10 +72,10 @@ export default {
         getLastMonthFirstDay(time) {
             let now = new Date(time);
             let firstDayOfMonth;
-            if(now.getMonth() == 0) {
-                firstDayOfMonth = new Date(now.getFullYear()-1, 11, 1);
-            }else {
-                firstDayOfMonth = new Date(now.getFullYear(), now.getMonth()-1, 1);
+            if (now.getMonth() == 0) {
+                firstDayOfMonth = new Date(now.getFullYear() - 1, 11, 1);
+            } else {
+                firstDayOfMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
             }
             return this.formatDateString(firstDayOfMonth)
         },
@@ -90,22 +90,46 @@ export default {
         },
 
         getThisWeek() {
+            this.$notify({
+                title: '本周',
+                message: [this.getThisMonday(), this.getToday()]
+            });
             console.log([this.getThisMonday(), this.getToday()])
         },
 
         getLastWeek(time) {
+            this.$notify({
+                title: '上周',
+                message: [this.getLastMonday(time), this.getThisSunday(time)]
+            });
             console.log([this.getLastMonday(time), this.getThisSunday(time)])
         },
 
         getThisMonth(time) {
-            console.log([this.getMonthFirstDay(time),this.getToday()])
+            this.$notify({
+                title: '本月',
+                message: [this.getMonthFirstDay(time), this.getToday()]
+            });
+            console.log([this.getMonthFirstDay(time), this.getToday()])
         },
 
         getLastMonth(time) {
-            console.log(this.getLastMonthFirstDay(time),this.getLastMonthLastDay(time))
+            this.$notify({
+                title: '上月',
+                message: [this.getLastMonthFirstDay(time), this.getLastMonthLastDay(time)]
+            });
+            console.log([this.getLastMonthFirstDay(time), this.getLastMonthLastDay(time)])
         }
 
     }
 }
 </script>
+
+<style scoped>
+.text-box {
+    width: 200px;
+    display: inline-block;
+    margin-right: 30px;
+}
+</style>
   

@@ -2,7 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld  msg="Welcome to Your Vue.js App"></HelloWorld>
-    <el-button @click="print">打印</el-button>
+    <el-button type="success" @click="print">打印</el-button>
     <child id="print" ref="contentToPrint"></child>
   </div>
 </template>
@@ -35,3 +35,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .home {
+    
+  }
+</style>
