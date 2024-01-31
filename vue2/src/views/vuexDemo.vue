@@ -28,6 +28,14 @@
         <div>
             <h5>getters使用getters: {{ this.$store.getters.getStudentAgeThan20NameString }}</h5>
         </div>
+        <h1>moduleA</h1>
+        <h3>moduleA_name : {{ this.$store.state.a.name }}</h3>
+        <h3>getterSex: {{ this.$store.getters.getSex }}   getterSex2:{{ this.$store.getters.getSex2 }}  getterSex3:{{ this.$store.getters.getSex3 }}</h3>
+        <div>
+            <el-button @click="changeMyName">changeMyName</el-button>
+            <el-button @click="updateMyName('cjw12138')">updateMyName</el-button>
+            <el-button @click="asyncChangeMyName()">async</el-button>
+        </div>
     </div>
 </template>
   
@@ -69,6 +77,16 @@ export default {
                     console.log('finished')
                 }
             })
+        },
+        //``````````````````````````````````````````````````````````````````````````````
+        changeMyName() {
+            this.$store.commit('changeMyName')
+        },
+        updateMyName(name) {
+            this.$store.commit('updateMyName',name)
+        },
+        asyncChangeMyName() {
+            this.$store.dispatch('asyncChangeMyName')
         }
     }
 }
