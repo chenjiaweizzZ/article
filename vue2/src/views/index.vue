@@ -7,6 +7,7 @@
             <el-button @click="skip('vuexDemo')">vuexDemo</el-button>
             <el-button @click="skip('dialogDemo')">el-dialog封装</el-button>
             <el-button @click="skip('inputTypeNumber')">input输入数字</el-button>
+            <el-button @click="skip('mediumDemo')">流媒体案例</el-button>
         </div>
     </div>
 </template>

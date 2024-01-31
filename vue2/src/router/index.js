@@ -46,6 +46,11 @@ const routes = [
     path: '/inputTypeNumber',
     name: 'inputTypeNumber',
     component: () => import("../views/inputTypeNumber")
+  },
+  {
+    path: '/mediumDemo',
+    name: 'mediumDemo',
+    component: () => import("../views/mediumDemo")
   }
 ]
 
