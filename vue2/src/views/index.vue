@@ -1,13 +1,16 @@
 <template>
     <div class="about">
         <h1>index</h1>
-        <div>
+        <div class="iindex">
             <el-button @click="skip('print')">print案例</el-button>
             <el-button @click="skip('dateDemo')">deteDemo</el-button>
             <el-button @click="skip('vuexDemo')">vuexDemo</el-button>
             <el-button @click="skip('dialogDemo')">el-dialog封装</el-button>
             <el-button @click="skip('inputTypeNumber')">input输入数字</el-button>
             <el-button @click="skip('mediumDemo')">流媒体案例</el-button>
+            <el-button @click="skip('audioDemoMul')">流媒体唯一</el-button>
+            <el-button @click="skip('audioDemoGet')">流媒体GET</el-button>
+            <el-button @click="skip('audioDemoGet2')">流媒体GET2</el-button>
         </div>
     </div>
 </template>
@@ -25,3 +28,9 @@ export default {
     }
 }
 </script>
+
+<style>
+.iindex {
+    line-height: 50px;
+}
+</style>

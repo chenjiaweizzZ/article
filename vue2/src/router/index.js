@@ -51,6 +51,21 @@ const routes = [
     path: '/mediumDemo',
     name: 'mediumDemo',
     component: () => import("../views/mediumDemo")
+  },
+  {
+    path: '/audioDemoMul',
+    name: 'audioDemoMul',
+    component: () => import("../views/audioDemoMul")
+  },
+  {
+    path: '/audioDemoGet',
+    name: 'audioDemoGet',
+    component: () => import("../views/audioDemoGet")
+  },
+  {
+    path: '/audioDemoGet2',
+    name: 'audioDemoGet2',
+    component: () => import("../views/audioDemoGet2")
   }
 ]
 
