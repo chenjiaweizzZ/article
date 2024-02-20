@@ -66,6 +66,11 @@ const routes = [
     path: '/audioDemoGet2',
     name: 'audioDemoGet2',
     component: () => import("../views/audioDemoGet2")
+  },
+  {
+    path: '/skip1',
+    name: 'skip1',
+    component: () => import("@/views/skip1")
   }
 ]
 

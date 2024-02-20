@@ -2,7 +2,7 @@
     <div class="audio-demo">
         <h1>audio-demo</h1>
             <audio :src="src" controls ref="music" @play="onPlay()"></audio>
-            <button @click="btnPlay()">play</button>
+            <el-button @click="btnPlay()">play</el-button>
     </div>
 </template>
   
