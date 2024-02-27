@@ -71,6 +71,11 @@ const routes = [
     path: '/skip1',
     name: 'skip1',
     component: () => import("@/views/skip1")
+  },
+  {
+    path: '/expandAmation',
+    name: 'expandAmation',
+    component: () => import("@/views/expandAmation")
   }
 ]
 
