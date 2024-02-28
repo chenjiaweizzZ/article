@@ -76,6 +76,11 @@ const routes = [
     path: '/expandAmation',
     name: 'expandAmation',
     component: () => import("@/views/expandAmation")
+  },
+  {
+    path: '/ellipsisDemo',
+    name: 'ellipsisDemo',
+    component: () => import("@/views/ellipsisDemo")
   }
 ]
 

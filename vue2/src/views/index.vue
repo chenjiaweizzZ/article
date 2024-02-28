@@ -13,6 +13,7 @@
             <el-button @click="skip('audioDemoGet2')">流媒体GET2</el-button>
             <el-button @click="skip('skip1')">mixins-skip1</el-button>
             <el-button @click="skip('expandAmation')">展开动画</el-button>
+            <el-button @click="skip('ellipsisDemo')">ellipsisDemo</el-button>
         </div>
     </div>
 </template>
