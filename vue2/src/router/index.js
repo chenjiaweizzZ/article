@@ -81,6 +81,11 @@ const routes = [
     path: '/ellipsisDemo',
     name: 'ellipsisDemo',
     component: () => import("@/views/ellipsisDemo")
+  },
+  {
+    path: '/asyncDemo',
+    name: 'asyncDemo',
+    component: () => import("@/views/asyncDemo")
   }
 ]
 

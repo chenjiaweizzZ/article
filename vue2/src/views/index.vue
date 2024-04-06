@@ -14,6 +14,7 @@
             <el-button @click="skip('skip1')">mixins-skip1</el-button>
             <el-button @click="skip('expandAmation')">展开动画</el-button>
             <el-button @click="skip('ellipsisDemo')">ellipsisDemo</el-button>
+            <el-button @click="skip('asyncDemo')">asyncDemo</el-button>
         </div>
     </div>
 </template>
