@@ -86,6 +86,11 @@ const routes = [
     path: '/asyncDemo',
     name: 'asyncDemo',
     component: () => import("@/views/asyncDemo")
+  },
+  {
+    path: '/docxView',
+    name: 'docxView',
+    component: () => import("@/views/docxView")
   }
 ]
 

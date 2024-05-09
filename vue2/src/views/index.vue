@@ -15,6 +15,7 @@
             <el-button @click="skip('expandAmation')">展开动画</el-button>
             <el-button @click="skip('ellipsisDemo')">ellipsisDemo</el-button>
             <el-button @click="skip('asyncDemo')">asyncDemo</el-button>
+            <el-button @click="skip('docxView')">docxView</el-button>
         </div>
     </div>
 </template>
