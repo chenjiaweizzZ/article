@@ -91,7 +91,22 @@ const routes = [
     path: '/docxView',
     name: 'docxView',
     component: () => import("@/views/docxView")
-  }
+  },
+  {
+    path: '/preview',
+    name: 'preview',
+    component: () => import("@/views/preview")
+  },
+  {
+    path: '/preview2',
+    name: 'preview2',
+    component: () => import("@/views/preview2")
+  },
+  {
+    path: '/preview3',
+    name: 'preview3',
+    component: () => import("@/views/preview3")
+  },
 ]
 
 const router = new VueRouter({

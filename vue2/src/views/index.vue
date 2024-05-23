@@ -16,6 +16,9 @@
             <el-button @click="skip('ellipsisDemo')">ellipsisDemo</el-button>
             <el-button @click="skip('asyncDemo')">asyncDemo</el-button>
             <el-button @click="skip('docxView')">docxView</el-button>
+            <el-button @click="skip('preview')">preview</el-button>
+            <el-button @click="skip('preview2')">preview2</el-button>
+            <el-button @click="skip('preview3')">preview3</el-button>
         </div>
     </div>
 </template>
