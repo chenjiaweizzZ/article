@@ -107,6 +107,11 @@ const routes = [
     name: 'preview3',
     component: () => import("@/views/preview3")
   },
+  {
+    path: '/stricky',
+    name: 'stricky',
+    component: () => import("@/views/stricky")
+  },
 ]
 
 const router = new VueRouter({
