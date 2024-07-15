@@ -112,6 +112,16 @@ const routes = [
     name: 'stricky',
     component: () => import("@/views/stricky")
   },
+  {
+    path: '/postMessageIndex',
+    name: 'postMessageIndex',
+    component: () => import("@/views/postMessageIndex")
+  },
+  {
+    path: '/postMessageChild',
+    name: 'postMessageChild',
+    component: () => import("@/views/postMessageChild")
+  }
 ]
 
 const router = new VueRouter({
