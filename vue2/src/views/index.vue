@@ -26,6 +26,7 @@
       <el-button @click="skip('inputFix')">inputFix</el-button>
       <el-button @click="skip('amapDemo')">amapDemo</el-button>
       <el-button @click="skip('amapDemo2')">amapDemo2</el-button>
+      <el-button @click="skip('amapDemo3')">amapDemo3</el-button>
     </div>
   </div>
 </template>

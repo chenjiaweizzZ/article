@@ -2,31 +2,27 @@
   <div class="map-container">
     <div id="map-container" ref="mapContainer"></div>
     <div class="controls">
-      <!-- <button @click="clearMarkers">清除所有标记</button>
-      <button @click="addRandomMarker">添加随机标记</button> -->
-      <!-- <div>点击地图添加标记</div>
-      <div>当前标记数: {{ markers.length }}</div> -->
       <div @click="addTest">addTest</div>
     </div>
   </div>
 </template>
 
 <script>
-import AmapInfoWindow from "@/components/InfoWindow";
+import InfoWindow from "@/components/InfoWindow";
+import Vue from "vue";
 export default {
   name: "AmapCDNDemo",
   components: {
-    AmapInfoWindow,
+    InfoWindow,
   },
   data() {
     return {
       map: null,
-      AMap: null, // 保存 AMap 对象
+      AMap: null,
       markers: [],
     };
   },
   mounted() {
-    // 确保 AMap 已加载
     if (window.AMap) {
       this.AMap = window.AMap;
       this.initMap();
@@ -43,22 +39,9 @@ export default {
         zoom: 9,
         enter: [120.19660949707033, 30.234747338474293],
       });
-
-      // 添加默认标记点
-      //   this.addMarker([120.215379, 30.207628], "省医保");
-
-      // 点击地图添加标记
-      // this.map.on("click", (e) => {
-      //   this.addMarker(
-      //     [e.lnglat.lng, e.lnglat.lat],
-      //     `标记点${this.markers.length + 1}`
-      //   );
-      // });
     },
     addTest() {
       this.addMarker([116.41688, 39.858894], `123`);
-      this.addMarker([117.41688, 39.858894], `123`);
-      this.addMarker([118.41688, 39.858894], `123`);
     },
     addMarker(position, title) {
       const markerContent = `
@@ -73,33 +56,28 @@ export default {
         content: markerContent,
       });
 
-      // 点击标记显示信息窗口
       marker.on("click", () => {
+        const container = document.createElement("div");
+
+        // 创建Vue组件实例
+        const ComponentClass = Vue.extend(InfoWindow);
+        const instance = new ComponentClass({
+          propsData: {
+            title: title,
+            position: position,
+          },
+        });
+
+        // 挂载组件
+        instance.$mount(container);
         const infoWindow = new this.AMap.InfoWindow({
-          content: `<info-window></info-window>`,
+          content: container,
           offset: new this.AMap.Pixel(0, -30),
         });
         infoWindow.open(this.map, position);
       });
 
       this.markers.push(marker);
-      // this.map.setFitView();
-    },
-
-    // 添加随机位置标记
-    addRandomMarker() {
-      const center = this.map.getCenter();
-      const lng = center.getLng() + (Math.random() - 0.5) * 0.1;
-      const lat = center.getLat() + (Math.random() - 0.5) * 0.1;
-      this.addMarker([lng, lat], `随机标记${this.markers.length + 1}`);
-    },
-
-    // 清除所有标记
-    clearMarkers() {
-      this.markers.forEach((marker) => {
-        marker.setMap(null);
-      });
-      this.markers = [];
     },
   },
 };
@@ -133,4 +111,3 @@ export default {
   margin-bottom: 10px;
 }
 </style>
- 

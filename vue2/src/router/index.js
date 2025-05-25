@@ -141,6 +141,11 @@ const routes = [
     path: '/amapDemo2',
     name: 'amapDemo2',
     component: () => import("@/views/amapDemo2")
+  },
+  {
+    path: '/amapDemo3',
+    name: 'amapDemo3',
+    component: () => import("@/views/amapDemo3")
   }
 ]
 
