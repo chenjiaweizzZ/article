@@ -22,6 +22,10 @@
       <el-button @click="skip('stricky')">stricky</el-button>
       <el-button @click="skip('postMessageIndex')">postMessageIndex</el-button>
       <el-button @click="skip('postMessageChild')">postMessageChild</el-button>
+      <el-button @click="skip('tableMerge')">tableMerge</el-button>
+      <el-button @click="skip('inputFix')">inputFix</el-button>
+      <el-button @click="skip('amapDemo')">amapDemo</el-button>
+      <el-button @click="skip('amapDemo2')">amapDemo2</el-button>
     </div>
   </div>
 </template>

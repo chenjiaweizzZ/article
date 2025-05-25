@@ -121,6 +121,26 @@ const routes = [
     path: '/postMessageChild',
     name: 'postMessageChild',
     component: () => import("@/views/postMessageChild")
+  },
+  {
+    path: '/tableMerge',
+    name: 'tableMerge',
+    component: () => import("@/views/tableMerge")
+  },
+  {
+    path: '/inputFix',
+    name: 'inputFix',
+    component: () => import("@/views/inputFix")
+  },
+  {
+    path: '/amapDemo',
+    name: 'amapDemo',
+    component: () => import("@/views/amapDemo")
+  },
+  {
+    path: '/amapDemo2',
+    name: 'amapDemo2',
+    component: () => import("@/views/amapDemo2")
   }
 ]
 
